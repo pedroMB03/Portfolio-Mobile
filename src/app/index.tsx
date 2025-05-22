@@ -57,12 +57,4 @@ const style = StyleSheet.create({
     flexWrap: "wrap",
     gap: 10,
   },
-  imagem: {
-    width: 110,
-    height: 150,
-    borderRadius: 10,
-    marginRight: 20,
-    borderWidth: 2,
-    borderColor: "#bcb3a2",
-  },
 });
