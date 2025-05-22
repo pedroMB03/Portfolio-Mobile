@@ -34,7 +34,7 @@ const style = StyleSheet.create({
   apresentacao: {
     flexDirection: "column",
     backgroundColor: "#314b6e",
-    padding: 20,
+    padding: 15,
     borderRadius: 20,
     marginVertical: 10,
     alignItems: "center",
@@ -51,19 +51,17 @@ const style = StyleSheet.create({
     textAlign: "center",
     fontSize: 22,
     fontWeight: "bold",
-    color: "#bcb3a2",
+    color: "white",
   },
   Paragrafo: {
     fontSize: 16,
-    color: "#bcb3a2",
+    color: "white",
     textAlign: "justify",
-    flex: 1,
+    minWidth: "70%",
   },
   conteudo: {
-    flexDirection: "row",
+    display: "flex",
     alignItems: "center",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: 10,
+    gap: 20,
   },
 });

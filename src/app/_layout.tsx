@@ -12,7 +12,7 @@ export default function RootLayout() {
           headerStyle: {
             backgroundColor: "#314b6e",
           },
-          headerTintColor: "#bcb3a2",
+          headerTintColor: "white",
           tabBarStyle: {
             backgroundColor: "#314b6e",
           },
