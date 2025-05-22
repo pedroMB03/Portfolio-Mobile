@@ -9,7 +9,7 @@ export default function Sobre() {
 
         <View style={style.conteudo}>
           <Image
-            source={require("../../assets/foto-perfil.jpg")}
+            source={require("../../assets/images/fotoMinha.jpg")}
             style={style.imagem}
           />
           <Text style={style.Paragrafo}>
@@ -41,8 +41,8 @@ const style = StyleSheet.create({
     gap: 20,
   },
   imagem: {
-    width: 120,
-    height: 120,
+    width: 110,
+    height: 150,
     borderRadius: 10,
     borderWidth: 2,
     borderColor: "#bcb3a2",
