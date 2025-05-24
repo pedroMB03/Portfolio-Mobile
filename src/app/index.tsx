@@ -23,6 +23,16 @@ export default function Index() {
           Bueno!
         </Text>
       </View>
+
+      <View style={style.apresentacao}>
+        <Text style={style.Titulo}>Bulls and Cows</Text>
+        <Text style={style.Paragrafo}>
+          Dentro desse aplicativo, foi criado um jogo chamado Bulls and Cows.
+          Você terá que adivinhar qual o número foi selecionado com base nos
+          Bulls (número certo no lugar certo) e nas Cows (numero certo no lugar
+          errado). Clique em jogo na barra de navegação e divirta-se
+        </Text>
+      </View>
     </ScrollView>
   );
 }
