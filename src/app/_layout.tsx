@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import Entypo from "@expo/vector-icons/Entypo";
 
 export default function RootLayout() {
   return (
@@ -13,11 +14,27 @@ export default function RootLayout() {
             backgroundColor: "#314b6e",
           },
           headerTintColor: "white",
-          tabBarStyle: {
-            backgroundColor: "#314b6e",
+          headerTitleStyle: {
+            fontWeight: "600",
+            fontSize: 18,
           },
-          tabBarActiveTintColor: "#bcb3a2",
-          tabBarInactiveTintColor: "white",
+          tabBarStyle: {
+            backgroundColor: "#FFFFFF",
+            borderTopWidth: 0,
+            height: 60,
+            paddingBottom: 5,
+            elevation: 10,
+          },
+          tabBarActiveTintColor: "#1E40AF",
+          tabBarInactiveTintColor: "#64748B",
+          tabBarLabelStyle: {
+            fontSize: 12,
+            fontWeight: "600",
+            marginTop: -3,
+          },
+          tabBarIconStyle: {
+            marginTop: 5,
+          },
         }}
       >
         <Tabs.Screen
@@ -45,14 +62,14 @@ export default function RootLayout() {
           name="experiencia-acad"
           options={{
             tabBarIcon: () => <FontAwesome name="book" size={24} />,
-            title: "Academicos",
+            title: "Exp. Academica",
           }}
         />
         <Tabs.Screen
-          name="experiencia-prof"
+          name="jogo"
           options={{
-            tabBarIcon: () => <Ionicons name="business" size={24} />,
-            title: "Profissional",
+            tabBarIcon: () => <Entypo name="game-controller" size={24} />,
+            title: "Jogo",
           }}
         />
       </Tabs>

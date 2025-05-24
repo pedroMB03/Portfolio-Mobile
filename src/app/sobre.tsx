@@ -1,24 +1,73 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Linking,
+} from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function Sobre() {
   return (
-    <ScrollView style={style.container}>
-      <View style={style.apresentacao}>
-        <Text style={style.Titulo}>Sobre mim</Text>
-
-        <View style={style.conteudo}>
+    <ScrollView
+      style={style.container}
+      contentContainerStyle={style.scrollContent}
+    >
+      <View style={style.ConteudoTopo}>
+        <View style={style.sombraImagem}>
           <Image
-            source={require("../../assets/images/fotoMinha.jpg")}
+            source={require("../../assets/images/minha ft.jpg")}
             style={style.imagem}
           />
-          <Text style={style.Paragrafo}>
-            Me chamo Pedro Marques Bezerra dos Santos, tenho 19 anos e sou um
-            estudante de Ciência da computação na Universidade Católicade
-            Pernambuco (UNICAP). Atualmente estou no 5° período do curso e estou
-            me desenvolvendo minhas habilidades e capacidades para me tornar um
-            ótimo cientista da computação.
-          </Text>
+        </View>
+        <Text style={style.nome}>Pedro Marques</Text>
+        <Text style={style.subtitulo}>Estudante de Ciência da Computação</Text>
+      </View>
+
+      <View style={style.apresentacao}>
+        <Text style={style.Titulo}>Sobre Mim</Text>
+        <Text style={style.Paragrafo}>
+          Tenho 19 anos e atualmente estou no 5° período na Universidade
+          Católica de Pernambuco (UNICAP). Estou desenvolvendo minhas
+          habilidades para me tornar um excelente profissional na área de
+          tecnologia, com foco em soluções inovadoras e eficientes.
+        </Text>
+      </View>
+
+      <View style={style.apresentacao}>
+        <Text style={style.Titulo}>Fale Comigo</Text>
+        <View style={style.socialContainer}>
+          <TouchableOpacity
+            style={style.socialButton}
+            activeOpacity={0.7}
+            onPress={() => Linking.openURL("https://github.com/pedroMB03")}
+          >
+            <AntDesign name="github" size={24} color="black" />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={style.socialButton}
+            activeOpacity={0.7}
+            onPress={() =>
+              Linking.openURL(
+                "https://www.linkedin.com/in/pedro-marques-821829270/o"
+              )
+            }
+          >
+            <FontAwesome name="linkedin" size={24} color="#1E40AF" />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={style.socialButton}
+            activeOpacity={0.7}
+            onPress={() => Linking.openURL("mailto:pedroo.mbs@gmail.com")}
+          >
+            <FontAwesome name="envelope" size={24} color="red" />
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -27,41 +76,88 @@ export default function Sobre() {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: "#8197ac",
+    backgroundColor: "#F8FAFC",
     flex: 1,
-    padding: 15,
   },
-  apresentacao: {
-    flexDirection: "column",
-    backgroundColor: "#314b6e",
-    padding: 15,
-    borderRadius: 20,
-    marginVertical: 10,
+  scrollContent: {
     alignItems: "center",
-    gap: 20,
+    paddingBottom: 30,
+  },
+  ConteudoTopo: {
+    alignItems: "center",
+    marginTop: 40,
+    marginBottom: 20,
+  },
+  sombraImagem: {
+    shadowColor: "#1E40AF",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 10,
   },
   imagem: {
-    width: 110,
+    width: 150,
     height: 150,
-    borderRadius: 10,
+    borderRadius: 90,
     borderWidth: 2,
-    borderColor: "#bcb3a2",
+    borderColor: "#1E40AF",
+  },
+  nome: {
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#1E293B",
+    marginTop: 20,
+    letterSpacing: 0.5,
+    textAlign: "center",
+  },
+  subtitulo: {
+    fontSize: 16,
+    color: "#64748B",
+    marginTop: 5,
+    fontStyle: "italic",
+  },
+  apresentacao: {
+    backgroundColor: "#FFFFFF",
+    width: "90%",
+    padding: 25,
+    borderRadius: 15,
+    marginTop: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
   },
   Titulo: {
-    textAlign: "center",
     fontSize: 22,
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: "600",
+    color: "#1E40AF",
+    marginBottom: 15,
+    textAlign: "center",
   },
   Paragrafo: {
-    fontSize: 16,
-    color: "white",
+    fontSize: 15,
+    color: "#334155",
+    lineHeight: 22,
     textAlign: "justify",
-    minWidth: "70%",
   },
-  conteudo: {
-    display: "flex",
-    alignItems: "center",
+  socialContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
     gap: 20,
+    marginTop: 15,
+  },
+  socialButton: {
+    width: 50,
+    height: 50,
+    backgroundColor: "#E2E8F0",
+    borderRadius: 25,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
   },
 });

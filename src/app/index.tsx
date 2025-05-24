@@ -3,14 +3,18 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 
 export default function Index() {
   return (
-    <ScrollView style={style.container}>
+    <ScrollView
+      style={style.container}
+      contentContainerStyle={style.scrollContent}
+    >
       <View style={style.apresentacao}>
-        <Text style={style.Titulo}>Bem vindo!</Text>
+        <Text style={style.Titulo}>Bem-vindo!</Text>
         <Text style={style.Paragrafo}>
           Aqui você encontrará informações sobre minha experiência acadêmica,
           profissional, projetos desenvolvidos e um pequeno jogo interativo.
         </Text>
       </View>
+
       <View style={style.apresentacao}>
         <Text style={style.Titulo}>Sobre o app</Text>
         <Text style={style.Paragrafo}>
@@ -25,36 +29,39 @@ export default function Index() {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: "#8197ac",
+    backgroundColor: "#F8FAFC",
     flex: 1,
     padding: 15,
   },
-  apresentacao: {
-    flexDirection: "column",
-    backgroundColor: "#314b6e",
-    padding: 20,
-    borderRadius: 20,
-    marginVertical: 10,
+  scrollContent: {
     alignItems: "center",
-    gap: 20,
+    paddingBottom: 30,
+    paddingTop: 20,
+  },
+  apresentacao: {
+    backgroundColor: "#FFFFFF",
+    width: "100%",
+    padding: 25,
+    borderRadius: 15,
+    marginTop: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
   },
   Titulo: {
     textAlign: "center",
     fontSize: 22,
     fontWeight: "bold",
-    color: "white",
+    color: "#1E40AF",
+    marginBottom: 15,
   },
   Paragrafo: {
     fontSize: 16,
-    color: "white",
+    color: "#334155",
+    lineHeight: 22,
     textAlign: "justify",
     flex: 1,
-  },
-  conteudo: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: 10,
   },
 });
