@@ -31,7 +31,7 @@ export default function Sobre() {
       <View style={style.apresentacao}>
         <Text style={style.Titulo}>Sobre Mim</Text>
         <Text style={style.Paragrafo}>
-          Tenho 19 anos e atualmente estou no 5° período na Universidade
+          Tenho 20 anos e atualmente estou no 5° período na Universidade
           Católica de Pernambuco (UNICAP). Estou desenvolvendo minhas
           habilidades para me tornar um excelente profissional na área de
           tecnologia, com foco em soluções inovadoras e eficientes.

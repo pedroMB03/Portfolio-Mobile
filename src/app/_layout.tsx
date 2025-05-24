@@ -1,7 +1,6 @@
 import React from "react";
 import { Tabs } from "expo-router";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import Entypo from "@expo/vector-icons/Entypo";
 
 export default function RootLayout() {
@@ -59,10 +58,10 @@ export default function RootLayout() {
           }}
         />
         <Tabs.Screen
-          name="experiencia-acad"
+          name="experiencias"
           options={{
             tabBarIcon: () => <FontAwesome name="book" size={24} />,
-            title: "Exp. Academica",
+            title: "Experiencias",
           }}
         />
         <Tabs.Screen

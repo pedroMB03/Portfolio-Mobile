@@ -50,11 +50,6 @@ export default function JogoBullsCows() {
       return;
     }
 
-    if (new Set(palpite).size !== 4) {
-      Alert.alert("Erro", "A tentativa não pode ter numéros repetidos!");
-      return;
-    }
-
     let bulls = 0;
     let cows = 0;
 
